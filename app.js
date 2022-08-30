@@ -23,3 +23,18 @@ function shownow(ele) {
     getmodalimg.src = ele.src;
     getcaption.textContent = ele.alt;
 }
+
+getbtnclose.addEventListener("click", function () {
+    getmodal.style.display = "none";
+});
+
+// getbtnclose.onclcick = function () {
+//     getmodal.style.display = "none";
+// }
+
+document.addEventListener("click", function (e) {
+    // console.log(e.target);
+    if (e.target === getmodal) {
+        getmodal.style.display = "block";
+    }
+})
